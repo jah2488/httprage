@@ -5,9 +5,14 @@ HTTP Status service meets the f7u12 rage face meme.
 Not intended to send HTTP methods. This is a simple placeholder service. Simply include an image on your 404 page with an <img> tag like such:
 
 	<img src="http://httprage.heroku.com/100" />
+
+or if you need HTTPS: 
+
+	<img src="https://httprage.heroku.com/100" />
+
 Returns:
 
-![HTTP Rage for Status 100](http://httprage.heroku.com/100 "HTTP Rage for Status 100")
+![HTTP Rage for Status 100](https://httprage.heroku.com/100 "HTTP Rage for Status 100")
 
 ## Maping
 * 100 - Continue - neutral-feel-like-a-sir
@@ -37,3 +42,7 @@ Returns:
 ## Roadmap
 
 Allow query string options for size (small|medium|large) and format (png|jpg|svg).
+
+## Credits
+
+All credit goes to original artists, and [Jake Lauer](http://jakelauer.com/) maintainer of [All The Rage Faces](http://alltheragefaces.com/).
