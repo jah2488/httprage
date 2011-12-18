@@ -4,10 +4,10 @@ HTTP Status service meets the f7u12 rage face meme.
 
 Not intended to send HTTP methods. This is a simple placeholder service. Simply include an image on your 404 page with an <img> tag like such:
 
-	<img src="http://httprage.dozierhudson.com/100" />
+	<img src="http://httprage.heroku.com/100" />
 Returns:
 
-![HTTP Rage for Status 100](http://httprage.dozierhudson.com/100 "HTTP Rage for Status 100")
+![HTTP Rage for Status 100](http://httprage.heroku.com/100 "HTTP Rage for Status 100")
 
 ## Maping
 * 100 - Continue - neutral-feel-like-a-sir
