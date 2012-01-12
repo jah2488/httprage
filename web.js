@@ -1,52 +1,32 @@
 var express = require('express');
-
 var app = express.createServer(express.logger());
 
-var createURL = function(fileName) {
-	return 'http://alltheragefaces.com/img/faces/png/' + fileName;
-}
+app.use(express.static(__dirname + '/public'));
 
-app.get('/', function(request, response) {
-	response.redirect(createURL('neutral-feel-like-a-sir.png'));
+var statusMap = {
+	100: 'neutral-feel-like-a-sir.png',
+	200: 'happy-epic-win.png',
+	401: 'fuck-yeah-gtfo.png',
+	403: 'angry-no.png',
+	404: 'fuck-that-bitch-scared-yao.png',
+	405: 'misc-got-a-badass-over-here.png',
+	406: 'cereal-guy-cereal-guy-spitting.png',
+	408: 'worried-me-culpa.png',
+	409: 'determined-serious-chiseled-not-okay.png'
+};
+
+app.get("/:statusCode", function(request, response) {
+	var statusCode = request.params.statusCode;
+	var statusImage = statusMap[statusCode] ? statusMap[statusCode] : statusMap[200];
+
+	response.redirect("http://httprage.heroku.com/" + statusImage);
 });
 
-app.get('/100', function(request, response) {
-	response.redirect(createURL('neutral-feel-like-a-sir.png'));
-});
-
-app.get('/200', function(request, response) {
-	response.redirect(createURL('happy-epic-win.png'));
-});
-
-app.get('/401', function(request, response) {
-	response.redirect(createURL('fuck-yeah-gtfo.png'));
-});
-
-app.get('/403', function(request, response) {
-	response.redirect(createURL('angry-no.png'));
-});
-
-app.get('/404', function(request, response) {
-	response.redirect(createURL('fuck-that-bitch-scared-yao.png'));
-});
-
-app.get('/405', function(request, response) {
-	response.redirect(createURL('misc-got-a-badass-over-here.png'));
-});
-
-app.get('/406', function(request, response) {
-	response.redirect(createURL('cereal-guy-cereal-guy-spitting.png'));
-});
-
-app.get('/408', function(request, response) {
-	response.redirect(createURL('worried-me-culpa.png'));
-});
-
-app.get('/409', function(request, response) {
-	response.redirect(createURL('determined-serious-chiseled-not-okay.png'));
+app.get("/", function(request, response) {
+	response.redirect("http://httprage.heroku.com/200");
 });
 
 var port = process.env.PORT || 3000;
 app.listen(port, function() {
-	console.log("Listening on " + port);
+	console.log("HTTP Rage: Listening on " + port);
 });
