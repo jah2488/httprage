@@ -17,13 +17,10 @@ var statusMap = {
 
 app.get("/:statusCode", function(request, response) {
 	var statusCode = request.params.statusCode;
-	var statusImage = statusMap[statusCode] ? statusMap[statusCode] : statusMap[200];
+	var statusImage = statusMap[statusCode] ? statusMap[statusCode] : statusMap[404];
 
-	response.redirect("http://httprage.heroku.com/" + statusImage);
-});
-
-app.get("/", function(request, response) {
-	response.redirect("http://httprage.heroku.com/200");
+	response.contentType(statusImage);
+	response.sendfile(__dirname + '/public/' + statusImage);
 });
 
 var port = process.env.PORT || 3000;
