@@ -6,13 +6,15 @@ app.use(express.static(__dirname + '/public'));
 var statusMap = {
 	100: 'neutral-feel-like-a-sir.png',
 	200: 'happy-epic-win.png',
+	302: 'misc-true-story.png',
 	401: 'fuck-yeah-gtfo.png',
 	403: 'angry-no.png',
 	404: 'fuck-that-bitch-scared-yao.png',
 	405: 'misc-got-a-badass-over-here.png',
 	406: 'cereal-guy-cereal-guy-spitting.png',
 	408: 'worried-me-culpa.png',
-	409: 'determined-serious-chiseled-not-okay.png'
+	409: 'determined-serious-chiseled-not-okay.png',
+	500: 'annoyed-im-watching-u.png'
 };
 
 app.get("/:statusCode", function(request, response) {
