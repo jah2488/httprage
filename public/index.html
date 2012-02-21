@@ -36,7 +36,7 @@
 				background-image: -o-radial-gradient(50% 35%, ellipse cover, #FAF7F7, #fffde8 100%);
 				background-image: -ms-radial-gradient(50% 35%, ellipse cover, #FAF7F7, #fffde8 100%);
 				background-image: radial-gradient(50% 35%, ellipse cover, #FAF7F7, #fffde8 100%);
-				font-family: "Lato", "helvetica neue",arial,sans-serif;
+				font-family: "helvetica neue",Helvetica,arial,sans-serif;
 				font-size: 14px;
 				line-height: 20px;
 				color: #211922;
@@ -55,18 +55,6 @@
 			a.brand {
 				text-shadow:none;
 			}
-		h1, h2, h3, h4, h5, h6, p {
-			visibility: hidden;
-		}
-		.wf-active h1,
-		.wf-active h2,
-		.wf-active h3,
-		.wf-active h4,
-		.wf-active h5,
-		.wf-active h6,
-		.wf-active p {
-			visibility: visible;
-		}
 		div#social {
 			position: relative;
 		}
@@ -85,6 +73,7 @@
 	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
+				<a href="http://github.com/duzour/httprage"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/e6bef7a091f5f3138b8cd40bc3e114258dd68ddf/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub"></a>
 				<a class="brand" href="/">HTTP Rage</a>
 			</div>
 		</div>
@@ -100,7 +89,7 @@
 			<div class="fb-like" data-href="http://www.httprage.com/" data-send="false" data-width="425" data-show-faces="false"></div>
 			
 		</div> 
-
+		
 		<div class="row"> 
 			<div class="span4 offset1"> 
 				<h2>Available Status Codes</h2> 
@@ -115,6 +104,7 @@
 					<li><a href="http://httprage.com/406">406 - Not Acceptable</a></li>
 					<li><a href="http://httprage.com/408">408 - Request Timeout</a></li>
 					<li><a href="http://httprage.com/409">409 - Conflict</a></li>
+					<li><a href="http://httprage.com/500">500 - Forbidden</a></li>
 				</ul>
 			</div>
 			<div class="span5 offset1"> 
@@ -142,45 +132,16 @@
 	<script src="http://platform.twitter.com/widgets.js" async></script> 
 	<script src="http://connect.facebook.net/en_US/all.js#xfbml=1" async></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
 	<script>
-		// Load my webfonts.
-		WebFont.load({
-			google: {
-				families: ["Lato"]
-			}
-		});
 		
 		// Load Google Analytics.
-		//var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview'],['_trackPageLoadTime']];
-		//(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-		//g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-		//s.parentNode.insertBefore(g,s)}(document,'script'));
+		var _gaq=[['_setAccount','UA-24713517-10'],['_trackPageview'],['_trackPageLoadTime']];
+		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+		g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+		s.parentNode.insertBefore(g,s)}(document,'script'));
 		
-		// Wrapper for console.log().
-		// usage: log('inside coolFunc', this, arguments);
-		// paulirish.com/2009/log-a-lightweight-wrapper-for-consolelog/
-		window.log = function(){
-		  log.history = log.history || [];   // store logs to an array for reference
-		  log.history.push(arguments);
-		  if(this.console) {
-		    arguments.callee = arguments.callee.caller;
-		    var newarr = [].slice.call(arguments);
-		    (typeof console.log === 'object' ? log.apply.call(console.log, console, newarr) : console.log.apply(console, newarr));
-		  }
-		};
-
-		// Make it safe to use console.log always.
-		(function(b){function c(){}for(var d="assert,clear,count,debug,dir,dirxml,error,exception,firebug,group,groupCollapsed,groupEnd,info,log,memoryProfile,memoryProfileEnd,profile,profileEnd,table,time,timeEnd,timeStamp,trace,warn".split(","),a;a=d.pop();){b[a]=b[a]||c}})((function(){try
-		{console.log();return window.console;}catch(err){return window.console={};}})());
 		
 	</script>
-
-	<!-- Prompt IE 6 users to install Chrome Frame. -->
-	<!--[if lt IE 7 ]>
-		<script defer src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
-		<script defer>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
-	<![endif]-->
 
 </body>
 </html>
