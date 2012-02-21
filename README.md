@@ -6,44 +6,40 @@ Not intended to send HTTP methods. This is a simple placeholder service. Simply 
 
 	<img src="http://httprage.com/404" />
 
-or if you need HTTPS: 
-
-	<img src="https://httprage.com/404" />
-
 ## Maping
 
 ### 100 - Continue
-![HTTP Rage for Status 100](https://httprage.com/100 "HTTP Rage for Status 100")
+![HTTP Rage for Status 100](http://httprage.com/100 "HTTP Rage for Status 100")
 
 ### 200 - Ok
-![HTTP Rage for Status 200](https://httprage.com/200 "HTTP Rage for Status 200")
+![HTTP Rage for Status 200](http://httprage.com/200 "HTTP Rage for Status 200")
 
 ### 302 - Found
-![HTTP Rage for Status 302](https://httprage.com/302 "HTTP Rage for Status 302")
+![HTTP Rage for Status 302](http://httprage.com/302 "HTTP Rage for Status 302")
 
 ### 401 - Unauthorized
-![HTTP Rage for Status 401](https://httprage.com/401 "HTTP Rage for Status 401")
+![HTTP Rage for Status 401](http://httprage.com/401 "HTTP Rage for Status 401")
 
 ### 403 - Forbidden
-![HTTP Rage for Status 403](https://httprage.com/403 "HTTP Rage for Status 403")
+![HTTP Rage for Status 403](http://httprage.com/403 "HTTP Rage for Status 403")
 
 ### 404 - Not Found
-![HTTP Rage for Status 404](https://httprage.com/404 "HTTP Rage for Status 404")
+![HTTP Rage for Status 404](http://httprage.com/404 "HTTP Rage for Status 404")
 
 ### 405 - Method Not Allowed
-![HTTP Rage for Status 405](https://httprage.com/405 "HTTP Rage for Status 405")
+![HTTP Rage for Status 405](http://httprage.com/405 "HTTP Rage for Status 405")
 
 ### 406 - Not Acceptable
-![HTTP Rage for Status 406](https://httprage.com/406 "HTTP Rage for Status 406")
+![HTTP Rage for Status 406](http://httprage.com/406 "HTTP Rage for Status 406")
 
 ### 408 - Request Timeout
-![HTTP Rage for Status 408](https://httprage.com/408 "HTTP Rage for Status 408")
+![HTTP Rage for Status 408](http://httprage.com/408 "HTTP Rage for Status 408")
 
 ### 409 - Conflict
-![HTTP Rage for Status 409](https://httprage.com/409 "HTTP Rage for Status 409")
+![HTTP Rage for Status 409](http://httprage.com/409 "HTTP Rage for Status 409")
 
 ### 500 - Forbidden
-![HTTP Rage for Status 500](https://httprage.com/500 "HTTP Rage for Status 500")
+![HTTP Rage for Status 500](http://httprage.com/500 "HTTP Rage for Status 500")
 
 
 ## Roadmap
